@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Offshore Taps Validation</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    margin: 20px;
+    color: #111;
+    background: #fff;
+  }
+
+  .box {
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: #fff;
+  }
+
+  .header {
+    font-weight: bold;
+    background-color: #e46868;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  .subheader {
+    background-color: #f2f2f2;
+    padding: 4px 8px;
+    font-weight: bold;
+    border-radius: 4px;
+    margin: 10px 0 8px;
+  }
+
+  .highlight-yellow { background-color: #fff3a3; }
+  .highlight-green { background-color: #d6f5d6; }
+  .highlight-blue { background-color: #c2f0f7; }
+  .highlight-red { background-color: #f8b4b4; }
+
+  .script-links {
+    margin: 12px 0 0;
+    font-weight: bold;
+  }
+
+  .script-links a {
+    margin-right: 14px;
+  }
+
+  blockquote {
+    border-left: 4px solid #ccc;
+    margin: 10px 0;
+    padding-left: 10px;
+  }
+
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    flex-wrap: nowrap;
+  }
+
+  .flex-item {
+    flex: 1 1 45%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 8px;
+    background-color: #f9f9f9;
+    min-width: 180px;
+    font-size: 0.95em;
+  }
+
+  .flex-item h4 {
+    margin: 0 0 8px;
+    color: darkred;
+    text-align: center;
+  }
+
+  .campaign-qna-heading {
+    margin: 0 0 12px;
+    padding: 10px 12px;
+    background: #f2f5f7;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+  }
+
+  .campaign-qna-heading h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .campaign-qna-heading p {
+    display: none;
+  }
+
+  .campaign-qna-content p,
+  .qna p {
+    margin: 10px 0;
+  }
+
+  .campaign-qna-status {
+    color: #555;
+    font-style: italic;
+  }
+
+  .status-note {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 700px) {
+    .flex-container {
+      flex-wrap: wrap;
+    }
+
+    .flex-item {
+      flex: 1 1 100%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="box" id="main-script">
+  <div class="header">Taps Validation - Confirming Donation Amount</div>
+  <p>
+    Hello! This is <b>(Your Full Name)</b> with the records department, paid to process your generous donation.
+    Thank you for supporting <b>(#list_description)</b>.
+  </p>
+  <p>
+    I see here you want to donate <b>(#province)</b>, is that amount comfortable for you?
+  </p>
+
+  <blockquote>
+    <div class="subheader">If interrupted before asking if the amount is comfortable</div>
+    <p class="highlight-yellow">
+      I completely understand (Sir/Ma'am). I just wanted to first thank you for your generous donation and make sure the
+      <b>(#province)</b> is definitely comfortable for you?
+    </p>
+  </blockquote>
+
+  <div class="flex-container">
+    <div class="flex-item highlight-blue">
+      <h4>Legitimate / Mail It To Me</h4>
+      <p>
+        Well (Ma'am/Sir), everyone who commits to help today will receive a confirmation receipt and thank you letter
+        that will have details about the organization and a call back number.
+      </p>
+      <p><b>So is the <span class="pledge-amount">(#province)</span> amount comfortable for you?</b></p>
+    </div>
+
+    <div class="flex-item highlight-blue">
+      <h4>Local / Location Questions</h4>
+      <p><b>Is this for my local?</b><br>This is a national drive. So is the <span class="pledge-amount">(#province)</span> amount comfortable for you?</p>
+      <p><b>Where are you located?</b><br>The organization is headquartered in Woodbridge, Virginia, but this is a national drive. So is the <span class="pledge-amount">(#province)</span> amount comfortable for you?</p>
+    </div>
+  </div>
+
+  <blockquote class="highlight-yellow">
+    <b>If the amount is not comfortable:</b>
+    Well (Ma'am/Sir), we would never want to burden good people that want to help. If the amount of
+    <b>(#province)</b> is not comfortable for you I can always make it smaller. What would be best for you?
+  </blockquote>
+
+  <blockquote>
+    <b>Bailout:</b> Unfortunately (Ma'am/Sir), I don't have an answer for that here and I don't want to answer you
+    incorrectly. However, I can give a toll-free number you can call: <b>866-439-6480</b>.
+  </blockquote>
+
+  <p class="status-note">Do not move past this step if you do not have a comfortable amount.</p>
+  <div class="script-links">
+    <a href="#donor-name">Go to Name</a>
+    <a href="#cc-ask-rebuttal">Go to CC Ask</a>
+    <a href="#campaign-qna-box">Go to Q&amp;A</a>
+  </div>
+</div>
+
+<div class="box" id="donor-name">
+  <div class="header">Confirming The Donor's Name</div>
+  <p class="highlight-green">
+    <b>Great! Thank you so much, it will go a long way to help.</b>
+  </p>
+  <p>
+    Now (Ma'am/Sir), <b>what is your first and last name for the receipt?</b>
+  </p>
+
+  <div class="flex-container">
+    <div class="flex-item highlight-yellow">
+      <h4>Doesn't Want To Give Name</h4>
+      <p>
+        Well Ma'am/Sir, what I have on file associated with this number is
+        <b>(#name)</b>. Is that correct?
+      </p>
+      <p>
+        <b>If no:</b> My apologies, since this is the first time the organization has contacted you I might have some
+        incorrect information. Can you please spell your first and last name for me for the mailing?
+      </p>
+    </div>
+
+    <div class="flex-item highlight-blue">
+      <h4>Name Step Q&amp;A Redirects</h4>
+      <p><b>Legitimate / mail it to me:</b> Everyone who commits to help today will receive a confirmation receipt and thank you letter with details about the organization and a call back number. So what is your first and last name for the receipt?</p>
+      <p><b>Local / location questions:</b> This is a national drive, and the organization is headquartered in Woodbridge, Virginia. So what is your first and last name for the receipt?</p>
+    </div>
+  </div>
+
+  <p class="status-note">Do not move past this step until you have the complete name of the donor.</p>
+  <div class="script-links">
+    <a href="#main-script">Back to Amount</a>
+    <a href="#cc-ask-rebuttal">Go to CC Ask</a>
+    <a href="#campaign-qna-box">Go to Q&amp;A</a>
+  </div>
+</div>
+
+<div class="box" id="cc-ask-rebuttal">
+  <div class="header">CC Ask And Rebuttal</div>
+  <p class="highlight-yellow" style="font-weight: bold; font-size: large;">
+    Which card are you using to process your generous donation: Visa, Mastercard, Discover, or American Express?
+  </p>
+
+  <div class="flex-container">
+    <div class="flex-item highlight-green">
+      <h4>If Yes To Using CC</h4>
+      <p><b>Do not use rebuttal.</b></p>
+      <p>Go straight to getting the credit card information.</p>
+      <p><a href="#cc-close">Go to CC Close</a></p>
+    </div>
+
+    <div class="flex-item highlight-blue">
+      <h4>If No To Using CC</h4>
+      <p>
+        I completely understand. We just ask everyone to use a card because it is a faster and more cost-effective
+        way to accept donations for the officers. Everything is done on a secure line, we'll never ask for your
+        security code so your information is never stored, and afterwards you will receive a receipt for your records.
+      </p>
+      <p><b>Knowing how safe it is, can you use a card just this one time?</b></p>
+      <p>
+        <b>If yes:</b> <a href="#cc-close">Go to CC Close</a><br>
+        <b>If no:</b> <a href="#mail-close">Go to Mail Close</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="script-links">
+    <a href="#donor-name">Back to Name</a>
+    <a href="#mail-close">Mail Close</a>
+    <a href="#cc-close">CC Close</a>
+    <a href="#campaign-qna-box">Go to Q&amp;A</a>
+  </div>
+</div>
+
+<div class="box" id="mail-close">
+  <div class="header">Mail Close</div>
+  <p>
+    I completely understand. If we mail you a receipt, can the organization count on you to mail back a check or money order?
+  </p>
+  <p class="highlight-yellow">
+    <b>Great, can you please spell your full street address and city for me? And now your state and ZIP code please.</b>
+    And is there any apt or unit number?
+  </p>
+  <p class="highlight-red">
+    <b>Make sure street address matches:</b> (#address). Change if incorrect.
+  </p>
+  <p>
+    And I always ask politely, can the <b>(#list_description)</b> count on you to immediately mail back your
+    <b>(#province)</b> donation as soon as you get this in the mail?
+  </p>
+
+  <div class="flex-container">
+    <div class="flex-item highlight-green">
+      <h4>If Yes</h4>
+      <p>
+        Great, thank you! Gifts and contributions made to the <b>(#list_description)</b> are not tax-deductible and this
+        call has been paid for by the <b>(#list_description)</b>. The website is <b><span class="campaign-website">the campaign website</span></b> and is
+        not authorized by any candidate or candidate's committee. Thanks, have a great day.
+      </p>
+    </div>
+
+    <div class="flex-item highlight-yellow">
+      <h4>If No / Can't Confirm</h4>
+      <p>
+        Well (Ma'am/Sir), we would never want to burden good people that want to help. If the amount of
+        <b>(#province)</b> is not comfortable for you I can always make it smaller. What would be best for you?
+      </p>
+    </div>
+  </div>
+
+  <p class="status-note">Do not read the CC close if you already read the mail close.</p>
+  <div class="script-links">
+    <a href="#cc-ask-rebuttal">Back to CC Ask</a>
+    <a href="#campaign-qna-box">Go to Q&amp;A</a>
+  </div>
+</div>
+
+<div class="box" id="cc-close">
+  <div class="header">CC Close</div>
+  <p class="highlight-green">
+    <b>Great, card number and expiration date whenever you are ready.</b>
+  </p>
+  <p>
+    <span class="highlight-red"><b>Always ask for authorization after getting the card number:</b></span><br>
+    (Ma'am/Sir), are you authorizing the <b>(#list_description)</b> to process your card for
+    <b>(#amount)</b>?
+  </p>
+  <p>
+    Can you please spell your street address and city for me? And now your state and ZIP code please.
+    And is there any apt or unit number?
+  </p>
+  <p class="highlight-red">
+    <b>Make sure street address matches:</b> (#address). Change if incorrect.
+  </p>
+
+  <blockquote class="highlight-yellow">
+    <b>After getting address, go to upsale:</b><br>
+    <span id="upsale-text">Loading upsale...</span>
+  </blockquote>
+
+  <blockquote>
+    <b>If yes to CC upsale, don't forget to reauthorize:</b><br>
+    (Ma'am/Sir), are you authorizing <b>(#list_description)</b> to process your card for
+    <b>(updated donation amount)</b>?
+  </blockquote>
+
+  <div class="flex-container">
+    <div class="flex-item highlight-green">
+      <h4>If Card Is Processed</h4>
+      <p>
+        Your donation was successfully processed; please look for your receipt and thank you letter in the mail in the
+        next few days. Gifts and contributions made to the <b>(#list_description)</b> are not tax-deductible and this
+        call has been paid for by the <b>(#list_description)</b>. The website is <b><span class="campaign-website">the campaign website</span></b> and is
+        not authorized by any candidate or candidate's committee. Thanks, have a great day.
+      </p>
+    </div>
+
+    <div class="flex-item highlight-yellow">
+      <h4>If Card Does Not Process</h4>
+      <p>My apologies Ma'am/Sir, can you please read your card number again?</p>
+      <p>
+        <b>If it does not process again:</b><br>
+        My apologies Ma'am/Sir, it seems your card is not processing for some reason. Do you have another card you can use?
+      </p>
+      <p><b>If no:</b> <a href="#mail-close">Proceed with mail close</a>.</p>
+    </div>
+  </div>
+
+  <div class="script-links">
+    <a href="#cc-ask-rebuttal">Back to CC Ask</a>
+    <a href="#mail-close">Mail Close</a>
+    <a href="#campaign-qna-box">Go to Q&amp;A</a>
+  </div>
+</div>
+
+<section class="box campaign-qna-box" id="campaign-qna-box">
+  <div class="header">Campaign Q&amp;A</div>
+  <div class="script-links">
+    <a href="#main-script">Go to Top</a>
+    <a href="#cc-ask-rebuttal">Asking for CC</a>
+    <a href="#mail-close">Mail Close</a>
+    <a href="#cc-close">CC Close</a>
+  </div>
+  <div id="campaign-qna-content">Loading campaign Q&amp;A...</div>
+</section>
+<script src="offshore-campaigns.js"></script>
+<script src="vicidial-params.js"></script>
+<script src="upsale-loader.js"></script>
+<script src="qna-loader.js"></script>
+</body>
+</html>
