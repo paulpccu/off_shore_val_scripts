@@ -58,6 +58,8 @@
     ]) || (campaign ? campaign.title : "");
     const pledgeAmount = firstValue(params, ["amount", "province"]);
     const address = firstValue(params, ["address", "address1"]);
+    const state = firstValue(params, ["state"]);
+    const postalCode = firstValue(params, ["postal_code", "zip", "zip_code"]);
 
     replaceTextPlaceholders([
       {
@@ -75,6 +77,14 @@
       {
         pattern: /\(\s*#address\s*\)|\(\s*ADDRESS\s*\)/gi,
         value: address
+      },
+      {
+        pattern: /\(\s*#state\s*\)|\(\s*STATE\s*\)/gi,
+        value: state
+      },
+      {
+        pattern: /\(\s*#postal_code\s*\)|\(\s*POSTAL_CODE\s*\)|\(\s*ZIP\s*\)|\(\s*ZIP CODE\s*\)/gi,
+        value: postalCode
       }
     ]);
 
