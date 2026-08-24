@@ -22,7 +22,7 @@
     border-radius: 6px;
     padding: 15px;
     margin-bottom: 20px;
-    background: #fff;
+    background: #f4f9ff;
   }
 
   .header {
@@ -133,7 +133,7 @@
 <body>
 
 <div class="box" id="main-script">
-  <div class="header">Taps Validation - Confirming Donation Amount</div>
+  <div class="header">Section 1 - Confirming Donation Amount</div>
   <p>
     Hello! This is <b>(Your Full Name)</b> with the records department, paid to process your generous donation.
     Thank you for supporting <b>(#list_description)</b>.
@@ -166,7 +166,21 @@
       <p><b>Where are you located?</b><br>The organization is headquartered in Woodbridge, Virginia, but this is a national drive. So is the <span class="pledge-amount">(#province)</span> amount comfortable for you?</p>
     </div>
   </div>
+  <div class="flex-container">
+    <div class="flex-item highlight-blue">
+      <h4>If the amount is not comfortable</h4>
+      <p>Well (Ma'am/Sir), we would never want to burden good people that want to help. If the amount of
+      <b>(#province)</b> is not comfortable for you I can always make it smaller. What would be best for you?</p>
+    </div>
+  </div>
 
+    <div class="flex-container">
+    <div class="flex-item highlight-blue">
+      <h4>Bailout</h4>
+      <p>Unfortunately (Ma'am/Sir), I don't have an answer for that here and I don't want to answer you
+      incorrectly. However, I can give a toll-free number you can call: <b>866-439-6480</b>.</p>
+    </div>
+  </div>
   <blockquote class="highlight-yellow">
     <b>If the amount is not comfortable:</b>
     Well (Ma'am/Sir), we would never want to burden good people that want to help. If the amount of
@@ -187,7 +201,7 @@
 </div>
 
 <div class="box" id="donor-name">
-  <div class="header">Confirming The Donor's Name</div>
+  <div class="header">Section 2 - Confirming The Donor's Name</div>
   <p class="highlight-green">
     <b>Great! Thank you so much, it will go a long way to help.</b>
   </p>
@@ -224,7 +238,7 @@
 </div>
 
 <div class="box" id="cc-ask-rebuttal">
-  <div class="header">CC Ask And Rebuttal</div>
+  <div class="header">Section 3 - CC Ask And Rebuttal</div>
   <p class="highlight-yellow" style="font-weight: bold; font-size: large;">
     Which card are you using to process your generous donation: Visa, Mastercard, Discover, or American Express?
   </p>
