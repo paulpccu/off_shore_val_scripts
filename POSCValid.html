@@ -114,6 +114,18 @@
     font-style: italic;
   }
 
+  .qna-item {
+    border-top: 1px solid #d6d6d6;
+    margin-top: 12px;
+    padding-top: 12px;
+  }
+
+  .qna-item:first-child {
+    border-top: 0;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
   .status-note {
     font-weight: bold;
     text-decoration: underline;
@@ -152,45 +164,40 @@
 
   <div class="flex-container">
     <div class="flex-item highlight-blue">
-      <h4>Legitimate / Mail It To Me</h4>
-      <p>
-        Well (Ma'am/Sir), everyone who commits to help today will receive a confirmation receipt and thank you letter
-        that will have details about the organization and a call back number.
-      </p>
-      <p><b>So is the <span class="pledge-amount">(#province)</span> amount comfortable for you?</b></p>
+      <div class="qna-item">
+        <h4>Legitimate / Mail It To Me</h4>
+        <p>
+          Well (Ma'am/Sir), everyone who commits to help today will receive a confirmation receipt and thank you letter
+          that will have details about the organization and a call back number.
+        </p>
+        <p><b>So is the <span class="pledge-amount">(#province)</span> amount comfortable for you?</b></p>
+      </div>
+
+      <div class="qna-item">
+        <h4>If The Amount Is Not Comfortable</h4>
+        <p>
+          Well (Ma'am/Sir), we would never want to burden good people that want to help. If the amount of
+          <b>(#province)</b> is not comfortable for you I can always make it smaller. What would be best for you?
+        </p>
+      </div>
     </div>
 
     <div class="flex-item highlight-blue">
-      <h4>Local / Location Questions</h4>
-      <p><b>Is this for my local?</b><br>This is a national drive. So is the <span class="pledge-amount">(#province)</span> amount comfortable for you?</p>
-      <p><b>Where are you located?</b><br>The organization is headquartered in Woodbridge, Virginia, but this is a national drive. So is the <span class="pledge-amount">(#province)</span> amount comfortable for you?</p>
-    </div>
-  </div>
-  <div class="flex-container">
-    <div class="flex-item highlight-blue">
-      <h4>If the amount is not comfortable</h4>
-      <p>Well (Ma'am/Sir), we would never want to burden good people that want to help. If the amount of
-      <b>(#province)</b> is not comfortable for you I can always make it smaller. What would be best for you?</p>
-    </div>
-  </div>
+      <div class="qna-item">
+        <h4>Local / Location Questions</h4>
+        <p><b>Is this for my local?</b><br>This is a national drive. So is the <span class="pledge-amount">(#province)</span> amount comfortable for you?</p>
+        <p><b>Where are you located?</b><br>The organization is headquartered in Woodbridge, Virginia, but this is a national drive. So is the <span class="pledge-amount">(#province)</span> amount comfortable for you?</p>
+      </div>
 
-    <div class="flex-container">
-    <div class="flex-item highlight-blue">
-      <h4>Bailout</h4>
-      <p>Unfortunately (Ma'am/Sir), I don't have an answer for that here and I don't want to answer you
-      incorrectly. However, I can give a toll-free number you can call: <b>866-439-6480</b>.</p>
+      <div class="qna-item">
+        <h4>Bailout</h4>
+        <p>
+          Unfortunately (Ma'am/Sir), I don't have an answer for that here and I don't want to answer you
+          incorrectly. However, I can give a toll-free number you can call: <b>866-439-6480</b>.
+        </p>
+      </div>
     </div>
   </div>
-  <blockquote class="highlight-yellow">
-    <b>If the amount is not comfortable:</b>
-    Well (Ma'am/Sir), we would never want to burden good people that want to help. If the amount of
-    <b>(#province)</b> is not comfortable for you I can always make it smaller. What would be best for you?
-  </blockquote>
-
-  <blockquote>
-    <b>Bailout:</b> Unfortunately (Ma'am/Sir), I don't have an answer for that here and I don't want to answer you
-    incorrectly. However, I can give a toll-free number you can call: <b>866-439-6480</b>.
-  </blockquote>
 
   <p class="status-note">Do not move past this step if you do not have a comfortable amount.</p>
   <div class="script-links">
